@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Signup page to create the account" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>sign up form</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .querySelector("form")
+          .addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+            alert("Signup Successful!");
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <header></header>
+
+    <main class="maincontainer">
+      <h1 class="heading">Signup</h1>
+      <form action="" method="post" class="signupform">
+        <input
+          type="text"
+          placeholder="Full Name"
+          required
+          class="inputField"
+        />
+        <input type="email" placeholder="Email" required class="inputField" />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          class="inputField"
+        />
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          required
+          class="inputField"
+        />
+        <input type="date" class="inputField" required />
+        <div class="radio1">
+          <input
+            type="radio"
+            name="std"
+            value="student"
+            id="student"
+            required
+          />
+          <label for="student">Student</label>
+          <input
+            type="radio"
+            name="std"
+            value="employee"
+            id="employee"
+            required
+          />
+          <label for="employee">Employee</label>
+        </div>
+        <div class="check1">
+          <input type="checkbox" id="terms" required />
+          <label for="terms">I agree to all the Terms and conditions</label>
+        </div>
+        <button class="submit1" type="submit">Signup</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
